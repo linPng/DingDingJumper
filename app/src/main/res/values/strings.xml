@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">钉钉跳转器</string>
+    <string name="accessibility_service_description">此服务允许钉钉跳转器自动打开钉钉进行打卡并返回应用。</string>
+</resources>

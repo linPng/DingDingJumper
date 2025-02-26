@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="钉钉跳转器"
+        android:textSize="24sp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/accessibilitySettingsButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="启用无障碍服务"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView" />
+
+    <TextView
+        android:id="@+id/checkInLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="上班时间:"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/accessibilitySettingsButton" />
+
+    <TextView
+        android:id="@+id/checkInTimeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="09:00"
+        android:textSize="18sp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintLeft_toRightOf="@id/checkInLabel"
+        app:layout_constraintTop_toTopOf="@id/checkInLabel"
+        app:layout_constraintBottom_toBottomOf="@id/checkInLabel" />
+
+    <Button
+        android:id="@+id/setCheckInTimeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="设置"
+        android:layout_marginStart="20dp"
+        app:layout_constraintLeft_toRightOf="@id/checkInTimeText"
+        app:layout_constraintTop_toTopOf="@id/checkInLabel"
+        app:layout_constraintBottom_toBottomOf="@id/checkInLabel" />
+
+    <TextView
+        android:id="@+id/checkOutLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="下班时间:"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkInLabel" />
+
+    <TextView
+        android:id="@+id/checkOutTimeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="18:00"
+        android:textSize="18sp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintLeft_toRightOf="@id/checkOutLabel"
+        app:layout_constraintTop_toTopOf="@id/checkOutLabel"
+        app:layout_constraintBottom_toBottomOf="@id/checkOutLabel" />
+
+    <Button
+        android:id="@+id/setCheckOutTimeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="设置"
+        android:layout_marginStart="20dp"
+        app:layout_constraintLeft_toRightOf="@id/checkOutTimeText"
+        app:layout_constraintTop_toTopOf="@id/checkOutLabel"
+        app:layout_constraintBottom_toBottomOf="@id/checkOutLabel" />
+
+    <Switch
+        android:id="@+id/enableAlarmSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="启用定时跳转"
+        android:layout_marginTop="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkOutLabel" />
+
+    <TextView
+        android:id="@+id/delayRangeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="随机延迟(秒):"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/enableAlarmSwitch" />
+
+    <SeekBar
+        android:id="@+id/delaySeekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="300"
+        android:progress="60"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintLeft_toRightOf="@id/delayRangeLabel"
+        app:layout_constraintRight_toLeftOf="@id/delayValueText"
+        app:layout_constraintTop_toTopOf="@id/delayRangeLabel"
+        app:layout_constraintBottom_toBottomOf="@id/delayRangeLabel" />
+
+    <TextView
+        android:id="@+id/delayValueText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="60秒"
+        android:textSize="16sp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/delayRangeLabel"
+        app:layout_constraintBottom_toBottomOf="@id/delayRangeLabel" />
+
+    <!-- 修改testJumpButton的约束 -->
+    <Button
+        android:id="@+id/testJumpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="测试跳转"
+        android:layout_marginTop="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/delayRangeLabel" />
+
+    <TextView
+        android:id="@+id/statusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="状态: 未设置定时任务"
+        android:layout_marginTop="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/testJumpButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
